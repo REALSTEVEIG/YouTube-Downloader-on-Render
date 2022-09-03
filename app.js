@@ -24,7 +24,7 @@ app.set('trust proxy', 1)
 app.use(cors())
 app.use(helmet({
     contentSecurityPolicy: false,
-  }));
+  })); //So that the css does not break
 app.use(xss())
 app.use(expressRateLimitter({windowsMs : 60 * 1000, max : 60}))
 
